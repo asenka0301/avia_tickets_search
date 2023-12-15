@@ -1,0 +1,36 @@
+.form {
+    display: flex;
+    gap: 10px;
+}
+
+.input {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    color: black;
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid var(--secondary);
+}
+
+button {
+    padding: 10px 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    border-radius: 5px;
+    border: none;
+    background-color: var(--secondary);
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--hover);
+}
