@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react';
 import styles from './Form.module.css';
+import getData from '../../pseudoApi';
 
-function Form() {
+function Form({ setSearchResult }) {
   const refTo = useRef();
   const refFrom = useRef();
   const [departureCity, setDepartureCity] = useState('');
@@ -11,6 +12,7 @@ function Form() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    setSearchResult(getData(departureCity, arrivalCity, departureDate, arrivalDate));
     setDepartureCity('');
     setArrivalCity('');
     setDepartureDate('');
