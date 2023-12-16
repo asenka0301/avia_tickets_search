@@ -1,26 +1,55 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './Form.module.css';
 
 function Form() {
   const refTo = useRef();
   const refFrom = useRef();
+  const [departureCity, setDepartureCity] = useState('');
+  const [arrivalCity, setArrivalCity] = useState('');
+  const [departureDate, setDepartureDate] = useState('');
+  const [arrivalDate, setArrivalDate] = useState('');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setDepartureCity('');
+    setArrivalCity('');
+    setDepartureDate('');
+    setArrivalDate('');
+  }
+
   return (
-    <form className={styles.form}>
-      <input className={styles.input} type="text" placeholder="Откуда" />
-      <input className={styles.input} type="text" placeholder="Куда" />
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <input
+        className={styles.input}
+        type="text"
+        placeholder="Откуда"
+        value={departureCity}
+        onChange={(e) => setDepartureCity(e.target.value)}
+      />
+      <input
+        className={styles.input}
+        type="text"
+        placeholder="Куда"
+        value={arrivalCity}
+        onChange={(e) => setArrivalCity(e.target.value)}
+      />
       <input
         ref={refTo}
         className={styles.input}
         placeholder="Когда"
-        onFocus={() => refTo.current.type = 'date'}
-        onBlur={() => refTo.current.type = 'text'}
+        value={departureDate}
+        onChange={(e) => setDepartureDate(e.target.value)}
+        onFocus={() => { refTo.current.type = 'date'; }}
+        onBlur={() => { refTo.current.type = 'text'; }}
       />
       <input
         ref={refFrom}
         className={styles.input}
         placeholder="Обратно"
-        onFocus={() => refFrom.current.type = 'date'}
-        onBlur={() => refFrom.current.type = 'text'}
+        value={arrivalDate}
+        onChange={(e) => setArrivalDate(e.target.value)}
+        onFocus={() => { refFrom.current.type = 'date'; }}
+        onBlur={() => { refFrom.current.type = 'text'; }}
       />
       <button type="submit">Найти билеты</button>
     </form>
