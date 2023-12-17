@@ -1,0 +1,71 @@
+.destination {
+  display: flex;
+  flex-direction: column;
+}
+
+.cities {
+  display: flex;
+  font-size: 1rem;
+  margin: 0 5px;
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.timeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0 5px;
+}
+
+.timeInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1rem;
+  padding: 10px 10px;
+}
+
+.time {
+  font-size: 1.3rem;
+}
+
+.date {
+  color: var(--primary);
+  font-size: 0.9rem;
+  padding: 0 5px;
+}
+
+.duration {
+  font-size: 1rem;
+}
+
+.transfer {
+  position: relative;
+  margin: 0 50px;
+}
+
+.line {
+  border-top: 1px solid gray;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+
+.text-in-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--secondary);
+  background-color: #fff;
+  padding: 0 10px;
+  font-size: 0.9rem;
+}
+
+.carrier {
+  font-size: 0.9rem;
+  margin: 0 5px;
+  padding: 10px 10px;
+}

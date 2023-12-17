@@ -1,0 +1,40 @@
+.flight {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+}
+
+.total {
+  text-align: end;
+}
+
+.text {
+  font-size: 0.8rem;
+}
+
+.destinations {
+  display: flex;
+  flex-direction: column;
+}
+
+.thick {
+  border-radius: 5px;
+  border: 2px solid var(--primary);
+}
