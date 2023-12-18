@@ -26,9 +26,24 @@ function countTransfers(length) {
   return length - 1;
 }
 
+function prepareCompaniesList(flights) {
+  const companiesList = {};
+  for (let i = 0; i < flights.length; i += 1) {
+    const companyName = flights[i].flight.carrier.caption;
+    const price = flights[i].flight.price.total.amount;
+    if (companiesList[companyName]) {
+      companiesList[companyName] = Math.min(companiesList[companyName], price);
+    } else {
+      companiesList[companyName] = price;
+    }
+  }
+  return companiesList;
+}
+
 export {
   getTime,
   getDate,
   getMinutesAndHours,
   countTransfers,
+  prepareCompaniesList,
 };

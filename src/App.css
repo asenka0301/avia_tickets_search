@@ -38,3 +38,13 @@
   color: grey;
   padding: 0 5px;
 }
+
+.sorting {
+  display: flex;
+  flex-direction: column;
+}
+
+.companies {
+  display: flex;
+  flex-direction: column;
+}
