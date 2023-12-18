@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styles from './Form.module.css';
 import getData from '../../pseudoApi';
 import { prepareCompaniesList } from '../../utils/utils';
@@ -6,10 +6,17 @@ import { prepareCompaniesList } from '../../utils/utils';
 function Form({ setSearchResult, setCompaniesList }) {
   const refTo = useRef();
   const refFrom = useRef();
+  const inputElement = useRef(null);
   const [departureCity, setDepartureCity] = useState('');
   const [arrivalCity, setArrivalCity] = useState('');
   const [departureDate, setDepartureDate] = useState('');
   const [arrivalDate, setArrivalDate] = useState('');
+
+  useEffect(() => {
+    if (inputElement.current) {
+      inputElement.current.focus();
+    }
+  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -25,6 +32,7 @@ function Form({ setSearchResult, setCompaniesList }) {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <input
+        ref={inputElement}
         className={styles.input}
         type="text"
         placeholder="Откуда"
