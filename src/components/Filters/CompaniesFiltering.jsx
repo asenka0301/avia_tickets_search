@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import styles from './Filters.module.css';
 
 function CompaniesFiltering({ companiesFilter, setCompaniesFilter, companiesList }) {
@@ -22,7 +23,7 @@ function CompaniesFiltering({ companiesFilter, setCompaniesFilter, companiesList
     <div className={styles.companies}>
       <h3 className={styles.title}>Авиакомпании</h3>
       {Object.entries(companiesList).map(([company, price]) => (
-        <label htmlFor={company} className={styles.label}>
+        <label htmlFor={company} className={styles.label} key={_.uniqueId('com')}>
           <input
             type="checkbox"
             value={company}

@@ -6,9 +6,13 @@ import Main from './components/Main/Main';
 function App() {
   const [searchResult, setSearchResult] = useState(null);
   const [companiesList, setCompaniesList] = useState(null);
+
   return (
     <>
-      <Header setSearchResult={setSearchResult} setCompaniesList={setCompaniesList} />
+      <Header
+        setSearchResult={setSearchResult}
+        setCompaniesList={setCompaniesList}
+      />
       {searchResult && <Main searchResult={searchResult} companiesList={companiesList} />}
     </>
   );

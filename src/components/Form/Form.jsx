@@ -20,13 +20,19 @@ function Form({ setSearchResult, setCompaniesList }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const searchResult = getData(departureCity, arrivalCity, departureDate, arrivalDate);
-    setSearchResult(searchResult);
-    setCompaniesList(prepareCompaniesList(searchResult));
-    setDepartureCity('');
-    setArrivalCity('');
-    setDepartureDate('');
-    setArrivalDate('');
+    try {
+      const response = getData(departureCity, arrivalCity, departureDate, arrivalDate);
+      if (response.length) {
+        setSearchResult(response);
+        setCompaniesList(prepareCompaniesList(response));
+        setDepartureCity('');
+        setArrivalCity('');
+        setDepartureDate('');
+        setArrivalDate('');
+      }
+    } catch (error) {
+      console.log('API Error:', error);
+    }
   }
 
   return (
