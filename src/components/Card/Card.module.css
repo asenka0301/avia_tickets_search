@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: var(--white);
+  border-radius: 10px;
 }
 
 .header {
@@ -12,8 +14,11 @@
   height: 50px;
   font-size: 1rem;
   font-weight: 600;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   color: var(--white);
   background-color: var(--primary);
+  overflow: hidden;
 }
 
 .price {
@@ -37,4 +42,22 @@
 .thick {
   border-radius: 5px;
   border: 2px solid var(--primary);
+}
+
+.button {
+  padding: 10px 15px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  border: none;
+  background-color: var(--secondary);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--hover);
 }

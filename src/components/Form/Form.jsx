@@ -56,7 +56,7 @@ function Form({ setSearchResult, setCompaniesList }) {
         onFocus={() => { refFrom.current.type = 'date'; }}
         onBlur={() => { refFrom.current.type = 'text'; }}
       />
-      <button type="submit">Найти билеты</button>
+      <button className={styles.button} type="submit">Найти билеты</button>
     </form>
   );
 }

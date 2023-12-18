@@ -3,26 +3,6 @@
     margin: 0 auto;
   }
 
-.main {
-  display: flex;
-  width: 100%;
-  margin-top: 30px;
-  padding: 0 128px;
-  gap: 20px;
-}
-
-.filters {
-  width: 500px;
-  border: 4px solid red;
-}
-
-.fligths-container {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  width: 100%;
-}
-
 .blue-text {
   color: var(--primary);
   font-weight: 300;
@@ -37,11 +17,6 @@
 .thin-line {
   color: grey;
   padding: 0 5px;
-}
-
-.sorting {
-  display: flex;
-  flex-direction: column;
 }
 
 .companies {

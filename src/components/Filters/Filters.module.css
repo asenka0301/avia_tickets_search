@@ -1,0 +1,18 @@
+.title {
+  padding: 0 0 10px;
+}
+
+.sorting,
+.filtering,
+.price-filtering,
+.companies {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  }
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

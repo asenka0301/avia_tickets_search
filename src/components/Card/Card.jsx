@@ -19,7 +19,7 @@ function Card({ flight }) {
         <hr className={styles.thick} />
         <Direction route={routeFrom} carrier={carrier} />
       </div>
-      <button type="button" className={styles.button}>Выбрать</button>
+      <button className={styles.button} type="button">Выбрать</button>
     </div>
   );
 }
